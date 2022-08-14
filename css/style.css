@@ -1,0 +1,83 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(255, 183, 0);
+  font-family: Arial, Helvetica, sans-serif;
+}
+#navbar ul {
+  list-style-type: none;
+}
+#navbar ul li {
+  color: #333;
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+}
+
+#navbar ul a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Ascundere ul by default */
+#navbar ul li ul {
+  display: none;
+}
+
+/* adaug efect de hover pentru fiecare li din meniu */
+#navbar ul li:hover {
+  cursor: pointer;
+  background-color: coral;
+  color: #fff;
+}
+
+#navbar ul li a:hover {
+  color: #fff;
+}
+
+/* in momentul hover-ului, vreau sa se afiseze meniul dropdown */
+#navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  margin-top: 1rem;
+}
+
+#navbar ul li:hover ul li {
+  display: block;
+  background-color: #fff;
+}
+
+#navbar ul li:hover ul li:hover {
+  background-color: red;
+}
+
+/* styling span  */
+#navbar ul li:hover ul li span {
+  float: right;
+  color: white;
+  background: coral;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+#navbar ul li:hover ul li span:hover {
+  background-color: green;
+}
+
+/* responsive design */
+@media (max-width: 600px) {
+  #navbar ul li {
+    display: block;
+  }
+  #navbar ul li:hover ul {
+    width: 100%;
+    position: relative;
+  }
+}
